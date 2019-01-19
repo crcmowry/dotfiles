@@ -37,8 +37,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 
-Plug 'altercation/vim-colors-solarized'
-Plug 'joshdick/onedark.vim'
+Plug 'dracula/vim', {'as':'dracula'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -145,8 +144,8 @@ let g:polyglot_disabled = ['latex']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set 7 lines to the cursor - when moving vertically using j/k
-set so=7
+" Set 0 lines to the cursor - when moving vertically using j/k
+set so=0
 
 " Avoid garbled characters in Chinese language windows OS
 let $LANG='en' 
@@ -256,10 +255,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 set background=dark
-
-let g:onedark_termcolors=16
-"let g:onedark_terminal_italics=1
-
+color dracula
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -274,9 +270,6 @@ set encoding=utf8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
-
-" Sets the color scheme to Onedark (Atom color scheme)
-colorscheme onedark
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -397,8 +390,8 @@ let g:airline_detect_paste=1
 " Show airline for tabs too
 let g:airline#extensions#tabline#enabled = 1
 
-" Use the onedark theme for the Airline status bar
-let g:airline_theme='onedark'
+" Use the dracula theme for the Airline status bar
+let g:airline_theme='dracula'
 
 " Format the status line
 "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
