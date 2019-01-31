@@ -34,7 +34,6 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 
 Plug 'dracula/vim', {'as':'dracula'}
@@ -50,7 +49,6 @@ Plug 'xolox/vim-easytags'
 Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/a.vim'
 Plug 'vim-scripts/matchit.zip'
-Plug 'valloric/youcompleteme'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -86,13 +84,6 @@ filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
-
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
-let mapleader = ","
-
-" Fast saving
-nmap <leader>w :w!<cr>
 
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
